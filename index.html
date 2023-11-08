@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+        /* background-color: black; */
+       }
+       .cont{
+        text-align: center;
+    padding-top: 8%;
+       }
+       h1{
+        /* color: white; */
+       }
+       #click{
+        width: 110px;
+        height: 50px;
+        border-radius: 8px;
+        border: transparent;
+        background-color: rgb(219, 161, 54);
+        font-weight: bold;
+        font-family: sans-serif;
+       }
+       #click:hover{
+     background-color: rgb(40, 88, 94);
+     color: white;
+     
+   
+       }
+   
+       #txt1{
+        width: 70%;
+    height: 260px;
+    /* background-color: black;
+    color: white; */
+    border: solid rgb(196, 49, 49);
+       }
+.btn{
+    padding: 15px 118px;
+}
+#btn-2{
+  padding: 15px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 8px;
+        background-color: rgb(219, 161, 54);
+}
+
+#btn-2:hover{
+     background-color: rgb(40, 88, 94);
+     color: white;
+     
+   
+       }
+       #btn-22{
+  padding: 15px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 8px;
+        background-color: rgb(219, 161, 54);
+}
+
+#btn-22:hover{
+     background-color: rgb(40, 88, 94);
+     color: white;
+     
+   
+       }
+.top{
+  text-align: end;
+}
+    </style>
+</head>
+<body>
+    <div class="top">
+      <button id="btn-2"  onclick="dark()">Enable Dark mode</button>
+      <button id="btn-22"  onclick="darkk()">Disable Dark mode</button>
+    </div>
+  
+   <div class="cont" >
+    
+    <h1>Convert A String To Uppercase, Lowercase, & Proper Case </h1>
+<textarea name="textwriter" id="txt1" cols="50" rows="50"></textarea>
+ 
+  
+   
+
+   <div class="btn">
+    <button id="click" onclick="uppercase() ">Upper case</button>
+    <button id="click" onclick="lowercase() ">Lower case</button>
+    <button id="click" onclick="sentencecase() ">Sentence case</button>
+    
+    <button id="click" onclick="clearr()">Clear</button>
+    
+   </div>
+  
+</div>
+
+   <script>
+
+    const a=document.getElementById('txt1');
+
+  function uppercase(){
+   a.value=a.value.toUpperCase();
+   
+    }
+
+    function lowercase(){
+   a.value=a.value.toLowerCase();
+  
+
+    }
+
+    function sentencecase(){
+      
+   var m=a.value.slice(0,1).toUpperCase();
+   
+   var n=m+a.value.slice(1).toLowerCase();
+   a.value=n;
+}
+    function clearr(){
+   a.value=' ';
+  
+    }
+  
+    const x=document.getElementById('btn-2');
+    const y=document.getElementById('btn-22');
+    
+  
+   function dark(){
+    document.body.style.backgroundColor="black";
+    document.body.style.color="white";
+  
+   }
+
+
+   function darkk(){
+    document.body.style.backgroundColor="white";
+    document.body.style.color="black";
+   }
+    
+  
+
+
+
+   
+
+
+
+</script>
+ 
+</body>
+</html>
